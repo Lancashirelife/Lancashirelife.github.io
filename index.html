@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner with Lancashire Life | Official Booking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://www.paypal.com/sdk/js?client-id=BAADrq4Fs4tBLgWs96IAPVD8zjUq-5sWv9Pf3-49IkUJvxDNL5ESk61NAjE3YoWPcCKPXq450OUxbiHxyo&components=hosted-buttons&disable-funding=venmo&currency=GBP"></script>
+
+    <style>
+        :root {
+            --rose-red: #B30000;
+            --dark-slate: #1a1a1a;
+            --light-gray: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--dark-slate); background-color: var(--white); overflow-x: hidden; }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1518107616385-ad3022129f23?auto=format&fit=crop&w=800&q=80');
+            background-size: cover; background-position: center; color: white; text-align: center; padding: 80px 20px;
+        }
+
+        .logo-rose { font-size: 50px; margin-bottom: 10px; }
+        h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 10px; }
+        .subtitle { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+
+        .stats-bar { background: var(--rose-red); color: white; display: flex; justify-content: space-around; padding: 20px 10px; text-align: center; }
+        .stat-item h3 { font-size: 1.5rem; margin-bottom: 5px; }
+        .stat-item p { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h2 { font-size: 2.2rem; color: var(--rose-red); }
+
+        .packages { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 40px; }
+        .card { border: 1px solid #eee; border-radius: 15px; padding: 30px; text-align: center; transition: 0.3s; background: white; position: relative; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .card.featured { border: 2px solid var(--rose-red); }
+        
+        .badge { background: var(--rose-red); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.7rem; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); font-weight: bold; }
+
+        .price { font-size: 2.5rem; font-weight: 800; margin: 15px 0; color: var(--rose-red); }
+        ul { list-style: none; margin-bottom: 25px; text-align: left; font-size: 0.9rem; flex-grow: 1; }
+        ul li { margin-bottom: 10px; padding-left: 25px; position: relative; }
+        ul li::before { content: '✓'; position: absolute; left: 0; color: var(--rose-red); font-weight: bold; }
+
+        .paypal-btn-container { margin-bottom: 15px; min-height: 50px; }
+
+        .bank-link {
+            display: block;
+            text-decoration: none;
+            color: var(--rose-red);
+            font-weight: bold;
+            font-size: 0.85rem;
+            padding: 12px;
+            border: 1px solid var(--rose-red);
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .bank-link:hover { background: var(--rose-red); color: white; }
+
+        /* Horizontal Swipe Section */
+        .swipe-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+            padding: 20px 0;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Firefox */
+        }
+        .swipe-container::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+        .testimonial-card {
+            flex: 0 0 85%; /* Shows 85% of card to hint at next card */
+            scroll-snap-align: center;
+            background: var(--light-gray);
+            border-radius: 15px;
+            padding: 30px;
+            border-left: 5px solid var(--rose-red);
+            font-style: italic;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .testimonial-card strong { display: block; margin-top: 15px; font-style: normal; color: var(--rose-red); }
+
+        .instruction-box { background: #fff5f5; border: 2px solid var(--rose-red); border-radius: 15px; padding: 30px; text-align: center; margin: 50px 0; }
+        .dm-btn { background: #000; color: white; padding: 12px 30px; border-radius: 30px; text-decoration: none; display: inline-block; margin-top: 15px; font-weight: bold; }
+
+        footer { text-align: center; padding: 60px 20px; font-size: 0.85rem; color: #888; border-top: 1px solid #eee; }
+
+        @media (min-width: 768px) {
+            .testimonial-card { flex: 0 0 45%; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-rose">🌹</div>
+    <h1>Lancashire Life</h1>
+    <p class="subtitle">Showcasing the best of Lancashire. 96.9K followers ready to discover your business.</p>
+</header>
+
+<div class="stats-bar">
+    <div class="stat-item"><h3>96.9K</h3><p>Followers</p></div>
+    <div class="stat-item"><h3>1.2M+</h3><p>Monthly Reach</p></div>
+    <div class="stat-item"><h3>100%</h3><p>Local Audience</p></div>
+</div>
+
+<div class="container">
+    <div class="section-title">
+        <h2>Spotlight Packages</h2>
+        <p>Select your package below to secure your placement.</p>
+    </div>
+
+    <div class="packages">
+        <div class="card">
+            <h3>Starter</h3>
+            <div class="price">£32</div>
+            <ul>
+                <li>2 Exclusive Stories</li>
+                <li>Great for a quick weekend boost</li>
+            </ul>
+            <div class="paypal-btn-container" id="paypal-container-N9YUZJK5WV2HE"></div>
+            <script>paypal.HostedButtons({ hostedButtonId: "N9YUZJK5WV2HE" }).render("#paypal-container-N9YUZJK5WV2HE")</script>
+            <a href="https://ig.me/m/lancashire.life?text=I%20want%20to%20pay%20for%20the%20£32%20Starter%20via%20Bank%20Transfer" class="bank-link">Pay via Bank/Wise</a>
+        </div>
+
+        <div class="card">
+            <div class="badge">TOWN FAVORITE</div>
+            <h3>Growth</h3>
+            <div class="price">£45</div>
+            <ul>
+                <li>1 Main Feed Post</li>
+                <li>3 Exclusive Stories</li>
+                <li>Get featured on the main grid</li>
+            </ul>
+            <div class="paypal-btn-container" id="paypal-container-8GF32HPMPGTKE"></div>
+            <script>paypal.HostedButtons({ hostedButtonId: "8GF32HPMPGTKE" }).render("#paypal-container-8GF32HPMPGTKE")</script>
+            <a href="https://ig.me/m/lancashire.life?text=I%20want%20to%20pay%20for%20the%20£45%20Growth%20via%20Bank%20Transfer" class="bank-link">Pay via Bank/Wise</a>
+        </div>
+
+        <div class="card featured">
+            <div class="badge">POPULAR CHOICE</div>
+            <h3>Premium</h3>
+            <div class="price">£65</div>
+            <ul>
+                <li>3 Posts + 5 Stories</li>
+                <li>Link Mention in Bio</li>
+                <li>Pinned Post (15 Days)</li>
+            </ul>
+            <div class="paypal-btn-container" id="paypal-container-B9S89BF3G68LN"></div>
+            <script>paypal.HostedButtons({ hostedButtonId: "B9S89BF3G68LN" }).render("#paypal-container-B9S89BF3G68LN")</script>
+            <a href="https://ig.me/m/lancashire.life?text=I%20want%20to%20pay%20for%20the%20£65%20Premium%20via%20Bank%20Transfer" class="bank-link">Pay via Bank/Wise</a>
+        </div>
+
+        <div class="card featured">
+            <div class="badge">FULL TAKEOVER</div>
+            <h3>Elite</h3>
+            <div class="price">£99</div>
+            <ul>
+                <li>5 Posts + 8 Stories</li>
+                <li>Link Mention in Bio</li>
+                <li>Pinned Post (1 Month)</li>
+                <li>Best for long-term growth</li>
+            </ul>
+            <div class="paypal-btn-container" id="paypal-container-QLL4MHHLKKFXU"></div>
+            <script>paypal.HostedButtons({ hostedButtonId: "QLL4MHHLKKFXU" }).render("#paypal-container-QLL4MHHLKKFXU")</script>
+            <a href="https://ig.me/m/lancashire.life?text=I%20want%20to%20pay%20for%20the%20£99%20Elite%20via%20Bank%20Transfer" class="bank-link">Pay via Bank/Wise</a>
+        </div>
+    </div>
+
+    <div class="section-title" style="margin-top: 60px;">
+        <h2>What Our Partners Say</h2>
+        <p>Swipe to see our recent success stories ➔</p>
+    </div>
+
+    <div class="swipe-container">
+        <div class="testimonial-card">
+            "Since our feature on Lancashire Life, our weekend bookings increased by 40%. The local audience is incredibly engaged!"
+            <strong>— Preston Cafe Owner</strong>
+        </div>
+        <div class="testimonial-card">
+            "We saw a massive spike in website traffic and over 50 new followers within 24 hours of our story feature. Best marketing we've done."
+            <strong>— Boutique Artisan</strong>
+        </div>
+        <div class="testimonial-card">
+            "The Elite package paid for itself in days. The bio link feature alone sent hundreds of new local customers to our booking page."
+            <strong>— Local Service Business</strong>
+        </div>
+        <div class="testimonial-card">
+            "Being pinned to the top of the grid kept our event sold out for three weeks straight. Highly recommend the Premium tier!"
+            <strong>— Event Organizer</strong>
+        </div>
+        <div class="testimonial-card">
+            "Fantastic communication and real results. It’s rare to find a platform with this much local influence in Lancashire."
+            <strong>— Ribble Valley Retailer</strong>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <h3>💡 Almost Finished!</h3>
+        <p>Once you have completed your payment, please send a screenshot of your receipt via Instagram DM to finalize your dates.</p>
+        <a href="https://ig.me/m/lancashire.life" class="dm-btn">Send Message on Instagram →</a>
+    </div>
+
+    <footer>
+        <p>© 2026 Lancashire Life. All slots are first-come, first-served. <br> Promoting Lancashire's people, places & independent businesses.</p>
+    </footer>
+</div>
+
+</body>
+</html>
